@@ -1,0 +1,70 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:17:50 MDT 2014
+| Date         : Tue Aug 05 18:32:24 2014
+| Host         : Sphinx running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tb_1_BFM_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of tb_1_BFM_1 (ikwzm:Dummy_Plug:AXI4_INTERCONNECT_TEST_BFM:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'tb_1_BFM_1'. These changes may impact your design.
+
+
+-upgraded port 'M00_ARLEN' width 8 differs from original width 9
+-upgraded port 'M00_ARLOCK' width 1 differs from original width 2
+-upgraded port 'M00_AWLEN' width 8 differs from original width 9
+-upgraded port 'M00_AWLOCK' width 1 differs from original width 2
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:17:50 MDT 2014
+| Date         : Tue Aug 05 17:57:41 2014
+| Host         : Sphinx running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tb_1_BFM_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of tb_1_BFM_1 (ikwzm:Dummy_Plug:AXI4_INTERCONNECT_TEST_BFM:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'tb_1_BFM_1'. These changes may impact your design.
+
+
+-upgraded port 'M00_ARLEN' width 9 differs from original width 8
+-upgraded port 'M00_ARLOCK' width 2 differs from original width 1
+-upgraded port 'M00_RDATA' width 32 differs from original width 512
+-upgraded port 'M00_AWLEN' width 9 differs from original width 8
+-upgraded port 'M00_AWLOCK' width 2 differs from original width 1
+-upgraded port 'M00_WDATA' width 32 differs from original width 512
+-upgraded port 'M00_WSTRB' width 4 differs from original width 64
+-upgraded port 'S00_ARLEN' width 4 differs from original width 8
+-upgraded port 'S00_ARLOCK' width 2 differs from original width 1
+-upgraded port 'S00_AWLEN' width 4 differs from original width 8
+-upgraded port 'S00_AWLOCK' width 2 differs from original width 1
+
