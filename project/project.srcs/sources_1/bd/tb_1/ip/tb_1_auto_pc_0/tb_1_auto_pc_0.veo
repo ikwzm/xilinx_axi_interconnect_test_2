@@ -70,8 +70,8 @@ tb_1_auto_pc_0 your_instance_name (
   .s_axi_awuser(s_axi_awuser),      // input wire [3 : 0] s_axi_awuser
   .s_axi_awvalid(s_axi_awvalid),    // input wire s_axi_awvalid
   .s_axi_awready(s_axi_awready),    // output wire s_axi_awready
-  .s_axi_wdata(s_axi_wdata),        // input wire [31 : 0] s_axi_wdata
-  .s_axi_wstrb(s_axi_wstrb),        // input wire [3 : 0] s_axi_wstrb
+  .s_axi_wdata(s_axi_wdata),        // input wire [63 : 0] s_axi_wdata
+  .s_axi_wstrb(s_axi_wstrb),        // input wire [7 : 0] s_axi_wstrb
   .s_axi_wlast(s_axi_wlast),        // input wire s_axi_wlast
   .s_axi_wvalid(s_axi_wvalid),      // input wire s_axi_wvalid
   .s_axi_wready(s_axi_wready),      // output wire s_axi_wready
@@ -93,7 +93,7 @@ tb_1_auto_pc_0 your_instance_name (
   .s_axi_arvalid(s_axi_arvalid),    // input wire s_axi_arvalid
   .s_axi_arready(s_axi_arready),    // output wire s_axi_arready
   .s_axi_rid(s_axi_rid),            // output wire [3 : 0] s_axi_rid
-  .s_axi_rdata(s_axi_rdata),        // output wire [31 : 0] s_axi_rdata
+  .s_axi_rdata(s_axi_rdata),        // output wire [63 : 0] s_axi_rdata
   .s_axi_rresp(s_axi_rresp),        // output wire [1 : 0] s_axi_rresp
   .s_axi_rlast(s_axi_rlast),        // output wire s_axi_rlast
   .s_axi_rvalid(s_axi_rvalid),      // output wire s_axi_rvalid
@@ -111,8 +111,8 @@ tb_1_auto_pc_0 your_instance_name (
   .m_axi_awvalid(m_axi_awvalid),    // output wire m_axi_awvalid
   .m_axi_awready(m_axi_awready),    // input wire m_axi_awready
   .m_axi_wid(m_axi_wid),            // output wire [3 : 0] m_axi_wid
-  .m_axi_wdata(m_axi_wdata),        // output wire [31 : 0] m_axi_wdata
-  .m_axi_wstrb(m_axi_wstrb),        // output wire [3 : 0] m_axi_wstrb
+  .m_axi_wdata(m_axi_wdata),        // output wire [63 : 0] m_axi_wdata
+  .m_axi_wstrb(m_axi_wstrb),        // output wire [7 : 0] m_axi_wstrb
   .m_axi_wlast(m_axi_wlast),        // output wire m_axi_wlast
   .m_axi_wvalid(m_axi_wvalid),      // output wire m_axi_wvalid
   .m_axi_wready(m_axi_wready),      // input wire m_axi_wready
@@ -133,7 +133,7 @@ tb_1_auto_pc_0 your_instance_name (
   .m_axi_arvalid(m_axi_arvalid),    // output wire m_axi_arvalid
   .m_axi_arready(m_axi_arready),    // input wire m_axi_arready
   .m_axi_rid(m_axi_rid),            // input wire [3 : 0] m_axi_rid
-  .m_axi_rdata(m_axi_rdata),        // input wire [31 : 0] m_axi_rdata
+  .m_axi_rdata(m_axi_rdata),        // input wire [63 : 0] m_axi_rdata
   .m_axi_rresp(m_axi_rresp),        // input wire [1 : 0] m_axi_rresp
   .m_axi_rlast(m_axi_rlast),        // input wire m_axi_rlast
   .m_axi_rvalid(m_axi_rvalid),      // input wire m_axi_rvalid

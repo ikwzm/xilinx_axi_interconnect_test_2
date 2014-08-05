@@ -22,10 +22,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="hw_handoff/tb_1.hwh"/>
-        <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="ip/tb_1_auto_pc_0/tb_1_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="ip/tb_1_BFM_1/tb_1_BFM_1.xci"/>
         <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="ip/tb_1_axi_interconnect_0_0/tb_1_axi_interconnect_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="ip/tb_1_BFM_1/tb_1_BFM_1.xci"/>
+        <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="hw_handoff/tb_1.hwh"/>
         <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="hdl/tb_1.v"/>
         <CompFileExtendedInfo CompFileName="tb_1.bd" FileRelPathName="tb_1_ooc.xdc"/>
       </File>

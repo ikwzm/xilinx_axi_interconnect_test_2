@@ -43,7 +43,8 @@
         <spirit:componentRef spirit:library="Dummy_Plug" spirit:name="AXI4_INTERCONNECT_TEST_BFM" spirit:vendor="ikwzm" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">tb_1_BFM_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="M00_DATA_WIDTH">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="S00_DATA_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="M00_DATA_WIDTH">64</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M00_ALEN_WIDTH">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="M00_ALOCK_WIDTH">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SCENARIO_FILE">../../../ip/bfm/src/scenarios/test.snr</spirit:configurableElementValue>

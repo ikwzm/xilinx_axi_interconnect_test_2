@@ -72,7 +72,7 @@ tb_1_BFM_1 your_instance_name (
   .M00_ARREADY(M00_ARREADY),    // input wire M00_ARREADY
   .M00_RVALID(M00_RVALID),      // input wire M00_RVALID
   .M00_RLAST(M00_RLAST),        // input wire M00_RLAST
-  .M00_RDATA(M00_RDATA),        // input wire [31 : 0] M00_RDATA
+  .M00_RDATA(M00_RDATA),        // input wire [63 : 0] M00_RDATA
   .M00_RRESP(M00_RRESP),        // input wire [1 : 0] M00_RRESP
   .M00_RID(M00_RID),            // input wire [3 : 0] M00_RID
   .M00_RREADY(M00_RREADY),      // output wire M00_RREADY
@@ -90,8 +90,8 @@ tb_1_BFM_1 your_instance_name (
   .M00_AWVALID(M00_AWVALID),    // output wire M00_AWVALID
   .M00_AWREADY(M00_AWREADY),    // input wire M00_AWREADY
   .M00_WLAST(M00_WLAST),        // output wire M00_WLAST
-  .M00_WDATA(M00_WDATA),        // output wire [31 : 0] M00_WDATA
-  .M00_WSTRB(M00_WSTRB),        // output wire [3 : 0] M00_WSTRB
+  .M00_WDATA(M00_WDATA),        // output wire [63 : 0] M00_WDATA
+  .M00_WSTRB(M00_WSTRB),        // output wire [7 : 0] M00_WSTRB
   .M00_WVALID(M00_WVALID),      // output wire M00_WVALID
   .M00_WREADY(M00_WREADY),      // input wire M00_WREADY
   .M00_BRESP(M00_BRESP),        // input wire [1 : 0] M00_BRESP
@@ -115,7 +115,7 @@ tb_1_BFM_1 your_instance_name (
   .S00_ARREADY(S00_ARREADY),    // output wire S00_ARREADY
   .S00_RVALID(S00_RVALID),      // output wire S00_RVALID
   .S00_RLAST(S00_RLAST),        // output wire S00_RLAST
-  .S00_RDATA(S00_RDATA),        // output wire [31 : 0] S00_RDATA
+  .S00_RDATA(S00_RDATA),        // output wire [63 : 0] S00_RDATA
   .S00_RRESP(S00_RRESP),        // output wire [1 : 0] S00_RRESP
   .S00_RID(S00_RID),            // output wire [3 : 0] S00_RID
   .S00_RREADY(S00_RREADY),      // input wire S00_RREADY
@@ -133,8 +133,8 @@ tb_1_BFM_1 your_instance_name (
   .S00_AWVALID(S00_AWVALID),    // input wire S00_AWVALID
   .S00_AWREADY(S00_AWREADY),    // output wire S00_AWREADY
   .S00_WLAST(S00_WLAST),        // input wire S00_WLAST
-  .S00_WDATA(S00_WDATA),        // input wire [31 : 0] S00_WDATA
-  .S00_WSTRB(S00_WSTRB),        // input wire [3 : 0] S00_WSTRB
+  .S00_WDATA(S00_WDATA),        // input wire [63 : 0] S00_WDATA
+  .S00_WSTRB(S00_WSTRB),        // input wire [7 : 0] S00_WSTRB
   .S00_WVALID(S00_WVALID),      // input wire S00_WVALID
   .S00_WREADY(S00_WREADY),      // output wire S00_WREADY
   .S00_BRESP(S00_BRESP),        // output wire [1 : 0] S00_BRESP
