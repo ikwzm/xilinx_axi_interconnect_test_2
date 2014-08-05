@@ -3,40 +3,44 @@
           XILINX AXI INTERCONNECT TEST BENCH SCENARIO 1.1
 ---
 - - [M00]
-  - WRITE :
-      ADDR  : "32'h00000004"
-      DATA  : "32'hDEADBEAF"
-
+  - AR: 
+    - {VALID: 0, ADDR: "32'h00000000", USER: 0, ID: 0, CACHE: 0}
+    - {WAIT : 10}
+    - {VALID: 1, ADDR: "32'h00001000", USER: 1, ID: 0, CACHE: 3}
+    - {WAIT : {VALID:1, READY:1}}
+    - {VALID: 0, ADDR: "32'h00000000", USER: 0, ID: 0, CACHE: 0}
+  - R:
+    - {READY: 0}
+    - {WAIT : {ARVALID:1, ARREADY:1}}
+    - {READY: 1}
+    - {WAIT : {VALID:1, READY:1}}
+    - {CHECK: {DATA: "32'h03020100", LAST: 0, RESP: OKAY}}
+    - {WAIT : {VALID:1, READY:1}}
+    - {CHECK: {DATA: "32'h07060504", LAST: 0, RESP: OKAY}}
+    - {WAIT : {VALID:1, READY:1}}
+    - {CHECK: {DATA: "32'h0B0A0908", LAST: 0, RESP: OKAY}}
+    - {WAIT : {VALID:1, READY:1}}
+    - {CHECK: {DATA: "32'h0F0E0D0C", LAST: 1, RESP: OKAY}}
+    - {READY: 0}
 - - [S00]
-  - AW:
-    - READY : 0
-    - WAIT  : 10
-    - READY : 1
-    - WAIT  : {AWVALID: 1, AWREADY: 1, TIMEOUT: 100000}
-    - CHECK :
-        ADDR  : "32'h00000004"
-        BURST : INCR
-        LEN   : 1              # LEN   = 1word
-        SIZE  : 4              # SIZE  = 4byte(32bit)
-        ID    : 0
-    - READY : 0
-  - W:
-    - READY : 0
-    - WAIT  : {AWVALID: 1, AWREADY: 1, TIMEOUT: 100000}
-    - READY : 1
-    - WAIT  : {WVALID: 1, WREADY: 1, TIMEOUT: 100000}
-    - CHECK :
-        DATA  : "32'hDEADBEAF"
-        STRB  :  "4'b1111"
-        LAST  : 1
-    - READY : 1
-  - B:
-    - VALID : 0
-      RESP  : OKAY
-    - WAIT  : {WVALID: 1, WREADY: 1, WLAST:1, TIMEOUT: 100000}
-    - VALID : 1
-      RESP  : OKAY
-    - WAIT  : {BVALID: 1, BREADY: 1, TIMEOUT: 100000}
-    - VALID : 0
-      RESP  : OKAY
+  - AR: 
+    - {READY: 0}
+    - {WAIT : {VALID:1}}
+    - {READY: 1}
+    - {WAIT : {VALID:1, READY:1}}
+    - {CHECK: {ADDR: "32'h00001000", USER: 1, ID: 0, CACHE: 3}}
+    - {READY: 0}
+  - R:
+    - {VALID: 0, DATA: "32'h00000000", LAST: 0, RESP: OKAY}
+    - {WAIT : {ARVALID: 1, ARREADY: 1}}
+    - {WAIT : 10}
+    - {VALID: 1, DATA: "32'h03020100", LAST: 0, RESP: OKAY}
+    - {WAIT : {VALID:1, READY:1}}
+    - {VALID: 1, DATA: "32'h07060504", LAST: 0, RESP: OKAY}
+    - {WAIT : {VALID:1, READY:1}}
+    - {VALID: 1, DATA: "32'h0B0A0908", LAST: 0, RESP: OKAY}
+    - {WAIT : {VALID:1, READY:1}}
+    - {VALID: 1, DATA: "32'h0F0E0D0C", LAST: 1, RESP: OKAY}
+    - {WAIT : {VALID:1, READY:1}}
+    - {VALID: 0, DATA: "32'h00000000", LAST: 0, RESP: OKAY}
 ---

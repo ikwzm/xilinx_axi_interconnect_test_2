@@ -1,12 +1,12 @@
 -----------------------------------------------------------------------------------
 --!     @file    axi4_channel_player.vhd
 --!     @brief   AXI4 A/R/W/B Channel Dummy Plug Player.
---!     @version 1.5.1
---!     @date    2013/7/17
+--!     @version 1.5.3
+--!     @date    2014/8/5
 --!     @author  Ichiro Kawazome <ichiro_k@ca2.so-net.ne.jp>
 -----------------------------------------------------------------------------------
 --
---      Copyright (C) 2012,2013 Ichiro Kawazome
+--      Copyright (C) 2012-2014 Ichiro Kawazome
 --      All rights reserved.
 --
 --      Redistribution and use in source and binary forms, with or without
@@ -2269,7 +2269,7 @@ begin
                     AWPROT_O  <= signals.AW.PROT                after OUTPUT_DELAY;
                     AWQOS_O   <= signals.AW.QOS                 after OUTPUT_DELAY;
                     AWREGION_O<= signals.AW.REGION              after OUTPUT_DELAY;
-                    AWUSER_O  <= signals.AW.id  (AWUSER_O'range)after OUTPUT_DELAY;
+                    AWUSER_O  <= signals.AW.USER(AWUSER_O'range)after OUTPUT_DELAY;
                     AWID_O    <= signals.AW.id  (AWID_O  'range)after OUTPUT_DELAY;
                 end if;
                 if (MASTER and READ_ENABLE  and CHANNEL = AXI4_CHANNEL_AR) then
@@ -2283,7 +2283,7 @@ begin
                     ARPROT_O  <= signals.AR.PROT                after OUTPUT_DELAY;
                     ARQOS_O   <= signals.AR.QOS                 after OUTPUT_DELAY;
                     ARREGION_O<= signals.AR.REGION              after OUTPUT_DELAY;
-                    ARUSER_O  <= signals.AR.id  (ARUSER_O'range)after OUTPUT_DELAY;
+                    ARUSER_O  <= signals.AR.USER(ARUSER_O'range)after OUTPUT_DELAY;
                     ARID_O    <= signals.AR.id  (ARID_O  'range)after OUTPUT_DELAY;
                 end if;
                 if (SLAVE  and WRITE_ENABLE and CHANNEL = AXI4_CHANNEL_AW) then
@@ -3051,7 +3051,9 @@ begin
                     proc_name => proc_name, 
                     signals   => out_signals.B
                 );
-                wait_until_xfer_w (core, proc_name, timeout, '1');
+                if (not (WVALID_I = '1' and WREADY_I = '1' and WLAST_I = '1')) then
+                    wait_until_xfer_w (core, proc_name, timeout, '1');
+                end if;
                 execute_output(out_signals);
                 wait_until_xfer_b (core, proc_name, timeout);
                 out_signals.B := AXI4_B_CHANNEL_SIGNAL_NULL;
